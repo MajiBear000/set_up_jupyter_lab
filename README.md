@@ -1,16 +1,16 @@
 # set_up_jupyter_lab
-install jupyterlab first
+Install jupyterlab first
 ```
 pip install jupyterlab
 ```
 # set up config
-use followin cmd to generate a config file
+Use following cmd to generate a config file:
 ```
 jupyter lab --generate-config
 ```
 or replace the file with your own config file.
 
-Generate your own password
+Generate your own password:
 ```
 ipython
 In [1]: from notebook.auth import passwd
