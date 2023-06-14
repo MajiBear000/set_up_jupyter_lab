@@ -3,7 +3,7 @@ c.ServerApp.allow_remote_access = True
 c.ServerApp.ip = '*'
 c.LabApp.open_browser = False
 c.ServerApp.port = 28888
-c.ServerApp.password = u'<your_password>'
+c.ServerApp.password = u'<your_passwd>'
 # Configuration file for lab.
 
 c = get_config()  #noqa
@@ -436,7 +436,14 @@ c = get_config()  #noqa
 #  Default: True
 # c.LabApp.cache_files = True
 
-## Whether to enable collaborative mode (experimental).
+## A callable class that receives the current version at instantiation and
+#  calling it must return asynchronously a string indicating which version is
+#  available and how to install or None if no update is available. The string
+#  supports Markdown format.
+#  Default: 'jupyterlab.handlers.announcements.CheckForUpdate'
+# c.LabApp.check_for_updates_class = 'jupyterlab.handlers.announcements.CheckForUpdate'
+
+## Whether to enable collaborative mode.
 #  Default: False
 # c.LabApp.collaborative = False
 
@@ -482,6 +489,12 @@ c = get_config()  #noqa
 ## Extra paths to look for federated JupyterLab extensions
 #  Default: []
 # c.LabApp.extra_labextensions_path = []
+
+## Whether to skip loading styles for disabled prebuilt extensions.
+#          This will be the default behavior starting with JupyterLab 4.0
+#          (and this flag will be removed).
+#  Default: False
+# c.LabApp.future_skip_styles_for_disabled = False
 
 ## Generate default config file.
 #  See also: JupyterApp.generate_config
@@ -531,6 +544,11 @@ c = get_config()  #noqa
 ## 
 #  See also: Application.logging_config
 # c.LabApp.logging_config = {}
+
+## URL that serves news Atom feed; by default the JupyterLab organization
+#  announcements will be fetched. Set to None to turn off fetching announcements.
+#  Default: 'https://jupyterlab.github.io/assets/feed.xml'
+# c.LabApp.news_url = 'https://jupyterlab.github.io/assets/feed.xml'
 
 ## Whether a notebook should start a kernel automatically.
 #  Default: True
