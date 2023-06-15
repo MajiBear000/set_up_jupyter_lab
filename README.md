@@ -18,7 +18,7 @@ In [2]: passwd()
 ```
 and save your passwd to config file
 # ipykernel
-在base环境下运行jupyter lab可以访问所有环境的ipykernel
+在base环境下运行jupyter lab可以访问所有环境的ipykernel（但是！cmd只在在jupyterlab运行的环境下执行）
 
 在环境中安装ipykernel
 ```
@@ -37,3 +37,8 @@ jupyter kernelspec remove shun
 ```
 to remove kernel
 
+# shut down
+Use following cmd to find the PID of which program taking this <port>.
+```
+lsof -i:<port>
+```
