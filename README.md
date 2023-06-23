@@ -51,3 +51,12 @@ Use following cmd to find the PID of which program taking this <port>.
 ```
 lsof -i:<port>
 ```
+
+# SSH remote connect#
+```
+ssh -N -f -L localhost:8889:localhost:8888 <username>@<remote_host>
+```
+其中： -N 告诉SSH没有命令要被远程执行； -f 告诉SSH在后台执行； -L 是指定port forwarding的配置，远端端口是8889，本地的端口号的8888。remote_user@remote_host 用实际的远程帐户和远程地址替换
+
+Ref: [彻底搞懂SSH端口转发命令](https://zhuanlan.zhihu.com/p/148825449)
+
