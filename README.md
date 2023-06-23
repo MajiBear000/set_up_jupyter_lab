@@ -20,7 +20,12 @@ ipython
 In [1]: from notebook.auth import passwd
 In [2]: passwd()
 ```
+or you can generate password in a jupyter_server_config.json file by
+```
+jupyter server password
+```
 and save your passwd to config file
+
 # ipykernel
 在base环境下运行jupyter lab可以访问所有环境的ipykernel（但是！cmd只在在jupyterlab运行的环境下执行）
 
