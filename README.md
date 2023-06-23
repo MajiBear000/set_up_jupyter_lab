@@ -3,6 +3,10 @@ Install jupyterlab first
 ```
 pip install jupyterlab
 ```
+or install by conda
+```
+conda install -c conda-forge jupyterlab
+```
 # set up config
 Use following cmd to generate a config file:
 ```
