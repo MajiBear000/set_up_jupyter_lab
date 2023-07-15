@@ -42,7 +42,7 @@ jupyter kernelspec list
 ```
 to check which env are in the kernel.
 ```
-jupyter kernelspec remove shun
+jupyter kernelspec remove <env_name>
 ```
 to remove kernel
 
