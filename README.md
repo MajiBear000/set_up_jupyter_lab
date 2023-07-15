@@ -27,7 +27,11 @@ jupyter server password
 and save your passwd to config file
 
 # ipykernel
-在base环境下运行jupyter lab可以访问所有环境的ipykernel（但是！cmd只在在jupyterlab运行的环境下执行）
+在base环境下运行jupyter lab可以访问所有环境的ipykernel~~（但是！cmd只在在jupyterlab运行的环境下执行）~~可以在kernel中运行以下代码实现在jupyter安装python包：
+```
+import sys 
+!{sys.executable} -m pip install flask
+```
 
 在环境中安装ipykernel
 ```
